@@ -20,8 +20,13 @@ void makeChai(){
     cout << "Boiling water, addig tea leaves, straining ..." << endl; 
 }
 
+// function overloading of serveChai, changing the parameters types, or numbers of parameters
 void serveChai(string teaType = "Masala Tea"){
     cout << "Serving " << teaType << endl;
+}
+
+void serveChai(int cup, int tealeaves){
+    cout << "To make " << cup << " cups we need " << tealeaves << tealeaves << endl;
 }
 
 int main()
