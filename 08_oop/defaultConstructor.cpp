@@ -10,6 +10,15 @@ class Chai
         int servings; // Number of servings
         vector<string> ingredients; // list of ingredients for the tea
 
+        // default constructor
+        Chai(){
+            cout << "Constructor called" << endl;
+            teaName = "Unknow Tea";
+            servings = 1;
+            ingredients = {"water", "Tea leaves"};
+        }
+
+
         // member function
 
         void displayChaiDetails(){
@@ -22,31 +31,15 @@ class Chai
             cout << endl;
         }
 
-    private:
-        string name;
 };
 
 
 
 int main()
 {
-    Chai chai; // used in java
-    Chai chaiOne;
+    Chai defaultChai;
 
-    chaiOne.teaName = "Lemon Tea";
-    chaiOne.servings = 2;
-    chaiOne.ingredients = {"Water", "lemon", "Honey", "tea"};
+    defaultChai.displayChaiDetails();
     
-    chaiOne.displayChaiDetails();
-
-
-    Chai chaiTwo;
-
-    chaiTwo.teaName = "Masala Chai";
-    chaiTwo.servings = 4;
-    chaiTwo.ingredients = {"Water", "Milk", "Tea", "Ginger", "Masala"};
-
-    chaiTwo.displayChaiDetails();
-
     return 0;
 }
